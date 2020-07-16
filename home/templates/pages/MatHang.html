@@ -1,0 +1,7 @@
+{% load static %}
+
+<form action="{% url 'luuMH' %}" method="post">
+    {% csrf_token %}
+    {{ MHForms.as_p }}
+    <button type="submit">save</button>
+</form>

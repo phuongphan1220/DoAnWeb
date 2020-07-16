@@ -1,0 +1,7 @@
+{% load static %}
+
+<form action="{% url 'luuLoaiDL' %}" method="post">
+    {% csrf_token %}
+    {{ LoaiDLForm.as_p }}
+    <button type="submit">save</button>
+</form>

@@ -1,0 +1,7 @@
+{% load static %}
+
+<form action="{% url 'luuQuan' %}" method="post">
+    {% csrf_token %}
+    {{ QuanForm.as_p }}
+    <button type="submit">save</button>
+</form>

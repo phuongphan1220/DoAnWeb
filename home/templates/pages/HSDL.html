@@ -1,0 +1,7 @@
+{% load static %}
+
+<form action="{% url 'luuHSDL' %}" method="post">
+    {% csrf_token %}
+    {{ HSDLForms.as_p}}
+    <button type="submit">save</button>
+</form>

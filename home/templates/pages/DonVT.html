@@ -1,0 +1,7 @@
+{#{% load static %}#}
+
+<form action="{% url 'luuDVT' %}" method="post">
+    {% csrf_token %}
+    {{ DVTForm.as_p }}
+    <button type="submit">save</button>
+</form>

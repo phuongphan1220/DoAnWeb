@@ -1,0 +1,31 @@
+{% extends "pages/base.html" %}
+{% block title %}Trang Chủ{% endblock %}
+{% block content %}
+    <!--Thanh menu-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li class="active"><a class="nav-link" href="home.html">Trang Chủ</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/HoSoDL/">QL Các Đại Lý</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/QLPXH/">QL Phiếu Xuất Hàng</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/QLMH/">QL Mặt Hàng</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/QLPTT/">QL Phiếu Thu Tiền</a></li>
+            </ul>
+            <ul class="nav navbar-nav justify-content-end">
+
+                {% if request.user.is_authenticated %}
+                    <li>
+                        <a href="http://127.0.0.1:8000/thoat/">Thoat</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/dangNhap/"> Đăng Nhập</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/dangKy/"> Đăng Ký</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+{% endblock %}

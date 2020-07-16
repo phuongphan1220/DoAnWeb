@@ -1,0 +1,7 @@
+{% load static %}
+
+<form action="{% url 'luuPXH' %}" method="post">
+    {% csrf_token %}
+    {{ PXHForm.as_p }}
+    <button type="submit">save</button>
+</form>
